@@ -1,21 +1,10 @@
-/*C5*/SET SCHEMA PUBLIC
+/*C4*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C6*/SET SCHEMA PUBLIC
-create table XavaCRM.Lead (id varchar(32) not null, name varchar(40), primary key (id))
-SET SCHEMA XAVACRM
-INSERT INTO OXMODULES VALUES('Lead','XavaCRM','N                                                                                                                                                                                                                                                              ',9999,'N                                                                                                                                                                                                                                                              ',NULL)
-DELETE FROM OXROLES_OXMODULES WHERE ROLES_NAME='user' AND MODULES_NAME='YourFirstEntity' AND MODULES_APPLICATION='XavaCRM'
-DELETE FROM OXMODULES WHERE NAME='YourFirstEntity' AND APPLICATION='XavaCRM'
-COMMIT
-INSERT INTO OXSESSIONSRECORD VALUES('402880466e5c1f07016e5c1ffdca0000','2019-11-11 21:20:30.782000','admin')
+/*C5*/SET SCHEMA XAVACRM
+INSERT INTO OXSESSIONSRECORD VALUES('402880466e665309016e66534bcd0000','2019-11-13 20:52:45.248000','admin')
 DELETE FROM OXUSERS WHERE NAME='admin'
-INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-11 21:20:30.782000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 20:52:45.248000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
 COMMIT
-INSERT INTO OXROLES_OXMODULES VALUES(NULL,NULL,NULL,'Lead','XavaCRM','user')
-COMMIT
-INSERT INTO OXSESSIONSRECORD VALUES('402880466e5c1f07016e5c2384a40001','2019-11-11 21:24:21.923000','admin')
-DELETE FROM OXUSERS WHERE NAME='admin'
-INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-11 21:24:21.923000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
-COMMIT
-INSERT INTO LEAD VALUES('402880466e5c1f07016e5c23a6b90002','PERICO')
+INSERT INTO LEAD VALUES('402880466e665309016e66687eb50001','Juanillo','<p>Una bona descripci&oacute;n</p>\u000a','juanillo@gmail.com','<p>Ninguna</p>\u000a','402880466e662e7e016e6634d9c20003')
+INSERT INTO LEAD_ACTIVITIES VALUES('402880466e665309016e66687eb50001','2019-11-13','Lo primero que hice')
 COMMIT
