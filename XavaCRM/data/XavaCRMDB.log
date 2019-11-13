@@ -1,10 +1,68 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C5*/SET SCHEMA XAVACRM
-INSERT INTO OXSESSIONSRECORD VALUES('402880466e665309016e66534bcd0000','2019-11-13 20:52:45.248000','admin')
+INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e667ff9b10000','2019-11-13 21:41:33.346000','admin')
 DELETE FROM OXUSERS WHERE NAME='admin'
-INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 20:52:45.248000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:41:33.346000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
 COMMIT
-INSERT INTO LEAD VALUES('402880466e665309016e66687eb50001','Juanillo','<p>Una bona descripci&oacute;n</p>\u000a','juanillo@gmail.com','<p>Ninguna</p>\u000a','402880466e662e7e016e6634d9c20003')
-INSERT INTO LEAD_ACTIVITIES VALUES('402880466e665309016e66687eb50001','2019-11-13','Lo primero que hice')
+/*C6*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C7*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e668040620001','2019-11-13 21:41:51.457000','admin')
+DELETE FROM OXUSERS WHERE NAME='admin'
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:41:51.457000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
 COMMIT
+DELETE FROM LEAD_ACTIVITIES WHERE LEAD_ID='402880466e665309016e66687eb50001' AND DATE='2019-11-13' AND DESCRIPTION='Lo primero que hice'
+DELETE FROM LEAD WHERE ID='402880466e665309016e66687eb50001'
+COMMIT
+INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e6680e7c90002','2019-11-13 21:42:34.312000','admin')
+DELETE FROM OXUSERS WHERE NAME='admin'
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:42:34.312000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+COMMIT
+INSERT INTO LEAD VALUES('402880466e667f75016e6680f39a0003','JUnit Lead','This is a JUnit Lead','junitlead@gmail.com','This is a remark','402880466e662e7e016e6634d9c20003')
+INSERT INTO LEAD_ACTIVITIES VALUES('402880466e667f75016e6680f39a0003','2019-11-13','The first activity with JUnit Lead')
+COMMIT
+/*C8*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C9*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e6681ee680004','2019-11-13 21:43:41.544000','admin')
+DELETE FROM OXUSERS WHERE NAME='admin'
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:43:41.544000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+COMMIT
+/*C10*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C11*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/DELETE FROM LEAD_ACTIVITIES WHERE LEAD_ID='402880466e667f75016e6680f39a0003' AND DATE='2019-11-13' AND DESCRIPTION='The first activity with JUnit Lead'
+DELETE FROM LEAD WHERE ID='402880466e667f75016e6680f39a0003'
+COMMIT
+INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e668259730005','2019-11-13 21:44:08.946000','admin')
+DELETE FROM OXUSERS WHERE NAME='admin'
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:44:08.946000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+COMMIT
+INSERT INTO LEAD VALUES('402880466e667f75016e668261a50006','JUnit Lead','This is a JUnit Lead','junitlead@gmail.com','This is a remark','402880466e662e7e016e6634d9c20003')
+INSERT INTO LEAD_ACTIVITIES VALUES('402880466e667f75016e668261a50006','2019-11-13','The first activity with JUnit Lead')
+COMMIT
+/*C12*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C13*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/DELETE FROM LEAD_ACTIVITIES WHERE LEAD_ID='402880466e667f75016e668261a50006' AND DATE='2019-11-13' AND DESCRIPTION='The first activity with JUnit Lead'
+DELETE FROM LEAD WHERE ID='402880466e667f75016e668261a50006'
+COMMIT
+INSERT INTO OXSESSIONSRECORD VALUES('402880466e667f75016e6682e6160007','2019-11-13 21:44:44.949000','admin')
+DELETE FROM OXUSERS WHERE NAME='admin'
+INSERT INTO OXUSERS VALUES('admin','Y                                                                                                                                                                                                                                                              ','N                                                                                                                                                                                                                                                              ',NULL,'2019-11-11 21:10:48.362000',NULL,0,NULL,'N                                                                                                                                                                                                                                                              ',NULL,NULL,'2019-11-13 21:44:44.949000','2019-11-11 21:10:48.361000',NULL,NULL,'-2fcc1dd51cb7514a99f03debf513ca7af3b25669',NULL,NULL,NULL,NULL,NULL,NULL,NULL)
+COMMIT
+INSERT INTO LEAD VALUES('402880466e667f75016e6682ee5b0008','JUnit Lead','This is a JUnit Lead','junitlead@gmail.com','This is a remark','402880466e662e7e016e6634d9c20003')
+INSERT INTO LEAD_ACTIVITIES VALUES('402880466e667f75016e6682ee5b0008','2019-11-13','The first activity with JUnit Lead')
+COMMIT
+DELETE FROM LEAD_ACTIVITIES WHERE LEAD_ID='402880466e667f75016e6682ee5b0008' AND DATE='2019-11-13' AND DESCRIPTION='The first activity with JUnit Lead'
+DELETE FROM LEAD WHERE ID='402880466e667f75016e6682ee5b0008'
+COMMIT
+/*C14*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C15*/SET SCHEMA PUBLIC
+DISCONNECT
