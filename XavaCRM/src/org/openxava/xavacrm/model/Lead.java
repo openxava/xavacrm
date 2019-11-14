@@ -17,6 +17,7 @@ import org.openxava.model.*;
 	"remarks { remarks }" + 
 	"activities { activities }"
 )
+@Tab(defaultOrder = "${status.description}") // tmp
 public class Lead extends Identifiable {
 	
 	@Column(length=40) @Required
@@ -30,14 +31,14 @@ public class Lead extends Identifiable {
 	private String email;
 	
 	@Stereotype("SIMPLE_HTML_TEXT") 
-	// @Column(columnDefinition="MEDIUMTEXT")
+	@Column(columnDefinition="MEDIUMTEXT")
 	private String description;
 
 	@Stereotype("SIMPLE_HTML_TEXT") 
-	// @Column(columnDefinition="MEDIUMTEXT")
+	@Column(columnDefinition="MEDIUMTEXT")
 	private String remarks;
 	
-	@ElementCollection
+	@ElementCollection @OrderBy("date")
 	private Collection<Activity> activities;
 
 	public String getName() {

@@ -4,7 +4,7 @@
 
 	<property name="project" value="XavaCRM" />
 	<property name="ox3" value="true" />
-	<property name="openxava.base.dir" value=".."/> <!-- Change if you want OpenXava and Addons in another folder -->
+	<!-- property name="openxava.base.dir" value=".."/--> <!-- Change if you want OpenXava and Addons in another folder -->
 	<property file="../openxava.properties"/>
 	
 	<!-- 
