@@ -36,11 +36,21 @@ openxava.addEditorInitFunction(function() {
 		 	editor.on( 'focus', function( e ) {			
 				var id = "#" + $(e.editor.element).attr("id") + "_buttons";
 				$(id + " input").fadeIn();
-				$('.ox-bottom-buttons').fadeOut();
+				$('.ox-bottom-buttons').children().fadeOut(); 
 				$('.ox-button-bar-button').fadeOut(); 
 			});
 		}
-	 });
+	});
+	
+	// If you modify the next code: test modify a field with this editor and then click on new, should ask for confirmation
+	$('.ox-ckeditor, .ox-simple-ckeditor').each( function () {		 
+		var editor = CKEDITOR.instances[this.id];		
+		if (editor !== undefined) {
+		 	editor.on( 'change', function( e ) {
+		 		openxava.dataChanged = true;
+			});
+		}
+	});
 
 });
 
