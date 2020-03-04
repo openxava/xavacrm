@@ -29,7 +29,7 @@ public class LeadTest extends ModuleTestBase {
 		};
 		
 		assertValidValues("status.id", status);
-		setValue("status.id", "402880466e662e7e016e6634d9c20003");
+		setValue("status.id", "402880466e662e7e016e663666d40005"); 
 		setValue("email", "junitlead@gmail.com");
 		setValue("description", "This is a JUnit Lead");
 		
@@ -44,11 +44,13 @@ public class LeadTest extends ModuleTestBase {
 		
 		assertListRowCount(1);
 		assertValueInList(0, 0, "JUnit Lead");
+		assertValueInList(0, 4, "Finished");
 		execute("List.viewDetail", "row=0");
 		
 		assertValue("name", "JUnit Lead");
-		assertValue("status.id", "402880466e662e7e016e6634d9c20003");
+		assertValue("status.id", "402880466e662e7e016e663666d40005"); 
 		assertValue("email", "junitlead@gmail.com");
+		assertValue("lastTouch", getCurrentDate()); 
 		execute("Sections.change", "activeSection=0");
 		assertValue("description", "This is a JUnit Lead");
 		execute("Sections.change", "activeSection=1");

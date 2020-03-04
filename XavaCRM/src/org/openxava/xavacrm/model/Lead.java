@@ -1,10 +1,13 @@
 package org.openxava.xavacrm.model;
 
+import java.time.*;
 import java.util.*;
 
 import javax.persistence.*;
+
 import org.openxava.annotations.*;
 import org.openxava.model.*;
+import org.openxava.util.*;
 
 /**
  * @author Javier Paniza
@@ -12,12 +15,15 @@ import org.openxava.model.*;
 
 @Entity
 @View(members=
-	"name, status, email;" +
+	"name, status, email, lastTouch;" + 
 	"description { description }" +
 	"remarks { remarks }" + 
 	"activities { activities }"
 )
-@Tab(defaultOrder = "${status.description}") // tmp
+@Tab(
+	properties= "name, email, lastTouch, status.description, status.finished, description, remarks",	
+	defaultOrder = "${status.description}"
+) 
 public class Lead extends Identifiable {
 	
 	@Column(length=40) @Required
@@ -30,6 +36,9 @@ public class Lead extends Identifiable {
 	@Column(length=40) 
 	private String email;
 	
+	@ReadOnly
+	private LocalDate lastTouch; 
+	
 	@Stereotype("SIMPLE_HTML_TEXT") 
 	@Column(columnDefinition="MEDIUMTEXT")
 	private String description;
@@ -40,6 +49,8 @@ public class Lead extends Identifiable {
 	
 	@ElementCollection @OrderBy("date")
 	private Collection<Activity> activities;
+	
+	
 
 	public String getName() {
 		return name;
@@ -87,6 +98,16 @@ public class Lead extends Identifiable {
 
 	public void setActivities(Collection<Activity> activities) {
 		this.activities = activities;
+		Activity last = (Activity) XCollections.last(activities);
+		if (last == null || last.getDate() == null) return;
+		lastTouch = last.getDate();
+	}
+
+	public LocalDate getLastTouch() {
+		return lastTouch;
+	}
+
+	public void setLastTouch(LocalDate lastTouch) {
 	}
 	
 }
