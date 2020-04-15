@@ -30,7 +30,7 @@ public class LeadTest extends ModuleTestBase {
 		
 		assertValidValues("status.id", status);
 		setValue("status.id", "402880466e662e7e016e663666d40005"); 
-		setValue("email", "junitlead@gmail.com");
+		setValue("email", "antonio.rodolfo.valentino.smith@thelargestcompanyinworld.com");
 		setValue("description", "This is a JUnit Lead");
 		
 		execute("Sections.change", "activeSection=1");
@@ -40,6 +40,7 @@ public class LeadTest extends ModuleTestBase {
 		setValueInCollection("activities", 0, "description", "The first activity with JUnit Lead");
 		
 		execute("CRUD.save");
+		assertNoErrors(); // TMP ME QUEDÉ POR AQUÍ: FALLA. DEBERÍA HACER: ALTER TABLE Lead MODIFY email VARCHAR(80);
 		execute("Mode.list");
 		
 		assertListRowCount(1);
@@ -49,7 +50,7 @@ public class LeadTest extends ModuleTestBase {
 		
 		assertValue("name", "JUnit Lead");
 		assertValue("status.id", "402880466e662e7e016e663666d40005"); 
-		assertValue("email", "junitlead@gmail.com");
+		assertValue("email", "antonio.rodolfo.valentino.smith@thelargestcompanyinworld.com");
 		assertValue("lastTouch", getCurrentDate()); 
 		execute("Sections.change", "activeSection=0");
 		assertValue("description", "This is a JUnit Lead");
