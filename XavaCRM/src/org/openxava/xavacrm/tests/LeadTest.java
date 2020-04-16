@@ -40,7 +40,7 @@ public class LeadTest extends ModuleTestBase {
 		setValueInCollection("activities", 0, "description", "The first activity with JUnit Lead");
 		
 		execute("CRUD.save");
-		assertNoErrors(); // TMP ME QUEDÉ POR AQUÍ: FALLA. DEBERÍA HACER: ALTER TABLE Lead MODIFY email VARCHAR(80);
+		assertNoErrors(); 
 		execute("Mode.list");
 		
 		assertListRowCount(1);
