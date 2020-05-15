@@ -1,6 +1,10 @@
 Change Log for XavaCRM
 ======================
 
+XavaCRM 2020.05 (2020-5-15)
+---------------------------
+- Upgraded to OpenXava 6.3.2.
+
 XavaCRM 2020.04 (2020-4-16)
 ---------------------------
 - Field email in Lead enlarged to 80 characters.
