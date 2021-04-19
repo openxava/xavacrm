@@ -18,7 +18,8 @@ import org.openxava.util.*;
 	"name, status, email, lastTouch;" + 
 	"description { description }" +
 	"remarks { remarks }" + 
-	"activities { activities }"
+	"activities { activities }" +
+	"attachments { attachments }" 
 )
 @Tab(
 	properties= "name, email, lastTouch, status.description, status.finished, description, remarks",	
@@ -50,7 +51,8 @@ public class Lead extends Identifiable {
 	@ElementCollection @OrderBy("date")
 	private Collection<Activity> activities;
 	
-	
+	@Stereotype("FILES")
+	private String attachments; 
 
 	public String getName() {
 		return name;
@@ -108,6 +110,14 @@ public class Lead extends Identifiable {
 	}
 
 	public void setLastTouch(LocalDate lastTouch) {
+	}
+
+	public String getAttachments() {
+		return attachments;
+	}
+
+	public void setAttachments(String attachments) {
+		this.attachments = attachments;
 	}
 	
 }

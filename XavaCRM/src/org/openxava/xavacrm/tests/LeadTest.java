@@ -39,6 +39,9 @@ public class LeadTest extends ModuleTestBase {
 		execute("Sections.change", "activeSection=2");
 		setValueInCollection("activities", 0, "description", "The first activity with JUnit Lead");
 		
+		execute("Sections.change", "activeSection=3");
+		uploadFile("attachments", "test-files/notes.txt");
+		
 		execute("CRUD.save");
 		assertNoErrors(); 
 		execute("Mode.list");
@@ -60,6 +63,8 @@ public class LeadTest extends ModuleTestBase {
 		assertCollectionColumnCount("activities", 1);
 		assertValueInCollection("activities", 0, "description", "The first activity with JUnit Lead");
 		assertValueInCollection("activities", 0, "date", getCurrentDate());
+		execute("Sections.change", "activeSection=3");
+		assertFile("attachments", 0, "text/plain");
 				
 		execute("CRUD.delete");
 		assertNoErrors();
