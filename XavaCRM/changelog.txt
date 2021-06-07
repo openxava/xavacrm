@@ -1,7 +1,11 @@
 Change Log for XavaCRM
 ======================
 
-XavaCRM 2021.09 (2021-4-19)
+XavaCRM 2021.06 (2021-6-7)
+--------------------------
+- Upgraded to OpenXava 6.5.2.
+
+XavaCRM 2021.04 (2021-4-19)
 ---------------------------
 - Added attachments to Lead.
 - Upgraded to OpenXava 6.5.1.

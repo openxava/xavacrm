@@ -71,7 +71,7 @@ public class LeadTest extends ModuleTestBase {
 	}
 	
 	private String getCurrentDate() {
-		return LocalDate.now().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT).withLocale(Locale.ENGLISH));
+		return LocalDate.now().format(DateTimeFormatter.ofPattern("M/d/yyyy")); 
 	}
 
 }
