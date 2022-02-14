@@ -2,7 +2,6 @@ package org.openxava.xavacrm.tests;
 
 import java.time.*;
 import java.time.format.*;
-import java.util.*;
 
 import org.openxava.tests.*;
 
@@ -22,10 +21,10 @@ public class LeadTest extends ModuleTestBase {
 		setValue("name", "JUnit Lead");
 		String [][] status = {
 			{ "", "" },	
-			{ "402880466e662e7e016e66349fbb0002", "A Confirmed" },
-			{ "402880466e662e7e016e6634d9c20003", "B Pending" },
-			{ "402880466e662e7e016e66364e5f0004", "X Discarded" },
-			{ "402880466e662e7e016e663666d40005", "Z Done" }
+			{ "4028808d7ef9e67a017ef9e9b8080001", "A Confirmed" },
+			{ "4028808d7ef9e67a017ef9e9d65e0002", "B Pending" },
+			{ "4028808d7ef9e67a017ef9e9f3b30003", "X Discarded" },
+			{ "4028808d7ef9e67a017ef9ea138b0004", "Z Done" }
 		};
 		
 		assertValidValues("status.id", status);
@@ -43,7 +42,7 @@ public class LeadTest extends ModuleTestBase {
 		uploadFile("attachments", "test-files/notes.txt");
 		
 		execute("CRUD.save");
-		assertNoErrors(); 
+		assertNoErrors(); // TMR ME QUEDÉ POR AQUÍ: FALLA
 		execute("Mode.list");
 		
 		assertListRowCount(1);
