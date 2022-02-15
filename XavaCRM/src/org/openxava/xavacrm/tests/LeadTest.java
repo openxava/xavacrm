@@ -28,7 +28,7 @@ public class LeadTest extends ModuleTestBase {
 		};
 		
 		assertValidValues("status.id", status);
-		setValue("status.id", "402880466e662e7e016e663666d40005"); 
+		setValue("status.id", "4028808d7ef9e67a017ef9ea138b0004"); // Done 
 		setValue("email", "antonio.rodolfo.valentino.smith@thelargestcompanyinworld.com");
 		setValue("description", "This is a JUnit Lead");
 		
@@ -42,7 +42,7 @@ public class LeadTest extends ModuleTestBase {
 		uploadFile("attachments", "test-files/notes.txt");
 		
 		execute("CRUD.save");
-		assertNoErrors(); // TMR ME QUEDÉ POR AQUÍ: FALLA
+		assertNoErrors(); 
 		execute("Mode.list");
 		
 		assertListRowCount(1);
@@ -51,7 +51,7 @@ public class LeadTest extends ModuleTestBase {
 		execute("List.viewDetail", "row=0");
 		
 		assertValue("name", "JUnit Lead");
-		assertValue("status.id", "402880466e662e7e016e663666d40005"); 
+		assertValue("status.id", "4028808d7ef9e67a017ef9ea138b0004"); // Done 
 		assertValue("email", "antonio.rodolfo.valentino.smith@thelargestcompanyinworld.com");
 		assertValue("lastTouch", getCurrentDate()); // If fails change the GMT+x in serverTimezone MySQL URL
 		execute("Sections.change", "activeSection=0");
