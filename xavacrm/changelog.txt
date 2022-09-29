@@ -1,0 +1,59 @@
+Change Log for XavaCRM
+======================
+
+TMR ME QUEDÉ POR AQUÍ: WAR CREADO, FALTA SUBIRLO A openxava.org Y ACTUALIZAR LA DB (NOMBRE DE APPLICATION)
+
+XavaCRM 2022.04 (2022-4-6)
+--------------------------
+- Upgraded to OpenXava 6.6.3.
+
+XavaCRM 2022.02 (2022-2-15)
+---------------------------
+- Upgraded to OpenXava 6.6.2.
+
+XavaCRM 2021.12 (2021-12-14)
+----------------------------
+- Upgraded to OpenXava 6.6.1.
+
+XavaCRM 2021.11 (2021-11-5)
+---------------------------
+- Upgraded to OpenXava 6.6.
+
+XavaCRM 2021.07 (2021-7-29)
+---------------------------
+- Upgraded to OpenXava 6.5.3.
+
+XavaCRM 2021.06 (2021-6-7)
+--------------------------
+- Upgraded to OpenXava 6.5.2.
+
+XavaCRM 2021.04 (2021-4-19)
+---------------------------
+- Added attachments to Lead.
+- Upgraded to OpenXava 6.5.1.
+
+XavaCRM 2020.09 (2020-9-28)
+---------------------------
+- Upgraded to OpenXava 6.4.1.
+
+XavaCRM 2020.08 (2020-8-5)
+--------------------------
+- Upgraded to OpenXava 6.4.
+
+XavaCRM 2020.05 (2020-5-15)
+---------------------------
+- Upgraded to OpenXava 6.3.2.
+
+XavaCRM 2020.04 (2020-4-16)
+---------------------------
+- Field email in Lead enlarged to 80 characters.
+- Upgraded to OpenXava 6.3.1.
+- Added changelog.txt.
+
+XavaCRM 2020.03 (2020-3-4)
+--------------------------
+- Upgraded to OpenXava 6.3.1.
+
+XavaCRM 2019.11 (2019-11-14)
+----------------------------
+- First version with Lead, LeadStatus and Activities
