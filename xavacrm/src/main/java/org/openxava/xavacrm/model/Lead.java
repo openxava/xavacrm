@@ -34,7 +34,7 @@ public class Lead extends Identifiable {
 	@ManyToOne(fetch=FetchType.LAZY, optional=false)
 	private LeadStatus status;
 	
-	@Column(length=80) @DisplaySize(50) 
+	@Column(length=80) @DisplaySize(40) 
 	private String email;
 	
 	@ReadOnly
