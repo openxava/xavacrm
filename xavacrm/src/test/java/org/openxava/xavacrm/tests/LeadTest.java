@@ -55,9 +55,9 @@ public class LeadTest extends ModuleTestBase {
 		assertValue("email", "antonio.rodolfo.valentino.smith@thelargestcompanyinworld.com");
 		assertValue("lastTouch", getCurrentDate()); // If fails change the GMT+x in serverTimezone MySQL URL
 		execute("Sections.change", "activeSection=0");
-		assertValue("description", "This is a JUnit Lead");
+		assertValue("description", "<p>This is a JUnit Lead</p>");
 		execute("Sections.change", "activeSection=1");
-		assertValue("remarks", "This is a remark");
+		assertValue("remarks", "<p>This is a remark</p>");
 		execute("Sections.change", "activeSection=2");
 		assertCollectionColumnCount("activities", 1);
 		assertValueInCollection("activities", 0, "description", "The first activity with JUnit Lead");
