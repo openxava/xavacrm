@@ -1,6 +1,10 @@
 Change Log for XavaCRM
 ======================
 
+XavaCRM 2024.01 (2024-1-8)
+--------------------------
+- Upgraded to OpenXava 7.2.2.
+
 XavaCRM 2023.12 (2023-12-11)
 ----------------------------
 - Upgraded to OpenXava 7.2.1.
