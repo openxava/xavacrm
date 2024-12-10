@@ -1,6 +1,12 @@
 Change Log for XavaCRM
 ======================
 
+XavaCRM 2024.12 (2024-12-10)
+----------------------------
+- MySQL JDBC driver upgraded to 9.1.
+- OpenXava upgraded to OpenXava 7.4.4.
+- Fix: Security vulnerability from dependencies.
+
 XavaCRM 2024.11 (2024-11-19)
 ----------------------------
 - Upgraded to OpenXava 7.4.3.
