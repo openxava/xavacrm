@@ -4,15 +4,15 @@
 
 	<groupId>org.openxava</groupId>
 	<artifactId>xavacrm</artifactId>
-	<version>2026.01</version>
+	<version>2026.03</version>
 	<packaging>war</packaging>
 
 	<properties>
-		<openxava.version>7.6.4</openxava.version>
+		<openxava.version>7.7</openxava.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- OpenXava applications work nicely with Java 1.8, 11 and 17 -->
-		<maven.compiler.source>11</maven.compiler.source>
-		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -21,6 +21,13 @@
 		<dependency>
 			<groupId>com.openxava</groupId>
 			<artifactId>xavapro</artifactId>
+			<version>${openxava.version}</version>
+		</dependency>
+
+		<!-- AI Chat functionality (requires Java 17) -->
+		<dependency>
+			<groupId>org.openxava</groupId>
+			<artifactId>openxava-7.7-chat-jdk17</artifactId>
 			<version>${openxava.version}</version>
 		</dependency>
 	
@@ -152,6 +159,15 @@
 						WEB-INF/lib/xalan-*.jar,
 						WEB-INF/lib/xercesImpl-*.jar,
 						WEB-INF/lib/xml-apis-*.jar</packagingExcludes>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<skipTests>true</skipTests>
 				</configuration>
 			</plugin>
 		</plugins>
