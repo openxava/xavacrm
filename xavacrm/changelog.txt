@@ -1,6 +1,16 @@
 Change Log for XavaCRM
 ======================
 
+XavaCRM 2026.09 (2026-9-29)
+---------------------------
+- Upgraded to OpenXava 8.0.
+- Application now launched with Spring Boot (mvn spring-boot:run).
+- Code migrated from javax to jakarta namespaces.
+- persistence.xml updated to Jakarta Persistence 3.2.
+- Datasource moved from context.xml to application.properties.
+- Removed web.xml and context.xml.
+- MySQL JDBC driver upgraded to 26.7.0.
+
 XavaCRM 2026.06 (2026-6-8)
 --------------------------
 - Upgraded to OpenXava 7.7.3.
